@@ -40,3 +40,32 @@ def find_dublicates(List):
 List=list(map(int,input('Enter the values of list on a single line with spaces\t\t ').strip().split()))		
 
 find_dublicates(List)
+####################################################################
+# program to print the missing numbers from 1 to 100 in the list
+
+# function printing the missing numbers from 1 to 100 in passed list
+def find_missing(List):
+	for number in range(1,101):
+		if number not in List:
+			print(number,' not present')
+
+		 '''here we r taking input from user for a list'''
+List=list(map(int,input('Enter the values of list on a single line with spaces\t\t ').strip().split())) 
+find_missing(List)#function calling statement
+################################################################	
+#program to find all pairs of an integer array whose sum is equal to a given number.
+
+#function printing the pairs
+def find_pairs(List=[],Sum=0):
+	for index in range(len(List)-1):
+		for index2 in range(index+1,len(List)):
+			if List[index]+List[index2]==Sum:
+				print('(',List[index],',',List[index2],')')
+
+
+'''here we r taking input from user for a list'''
+
+List=list(map(int,input('Enter the values of list on a single line with spaces\t\t ').strip().split())) 
+Sum=int(input('enter the number \t'))
+find_pairs(List,Sum)#function calling statement		
+############################################################
