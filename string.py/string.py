@@ -5,8 +5,8 @@
 # 	digitsNumber=0 #variable to count the number of character in string
 # 	digits='0123456789'
 # 	for character in string:#loop to read character of string one by one 
-# 		if character in digits:
-# 			digitsNumber+=1
+# 		if character in digits: #checking whether the character from string is a digit or not
+# 			digitsNumber+=1 #increment in the value of digitsNumber which stores the number of digits in sting
 
 # 	if digitsNumber==len(string):#comparing value of digitsNumber with length of string
 # 		return True
