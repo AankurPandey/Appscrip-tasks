@@ -1,7 +1,8 @@
+#######################################task 1
 #function to return minimum value
 def find_minimum(List):
 	minimum=List[0] # variable storing first value of list
-	for value in List:
+	for value in List:# loop for getting vlues of list one by one
 		if value<minimum:
 			minimum=value
 	return minimum
@@ -20,7 +21,7 @@ List=list(map(int,input('Enter the values of list on a single line with spaces\t
 print('Minimum value of list is ',find_minimum(List))#calling statement for finding minimum term
 print('Maximum value of list is ',find_maximum(List))#calling statement for finding maximum term
 
-######################################
+######################################task 2
 #program to find the dublicates in list
 
 #function to find the dublicates in list
