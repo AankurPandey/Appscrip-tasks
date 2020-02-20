@@ -153,4 +153,21 @@ ch=input('enter the character to be count\t\t')
 #printing and calling statement on the same line 
 print(ch,'occured',count_occurance(string.lower(),ch.lower()),' times in ',string)		
 #################################################################################
+# Python program to print all permutations 
+
+# Function to print permutations of string  
+def permute(list_string, start, length): 
+    if start==r: 
+        print( list_string)
+    else: 
+        for character in range(start,r+1): 
+            list_string[start], list_string[character] = list_string[character], list_string[start] 
+            permute(list_string, start+1, r) ## recursion as we r calling the same function again
+            list_string[start], list_string[character] = list_string[character], list_string[start] 
+  
+# Driver program to test the above function 
+string =input('enter the string')
+n = len(string) 
+list_string = list(string) 
+permute(list_string, 0, n-1) 
 
