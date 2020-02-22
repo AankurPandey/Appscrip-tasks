@@ -53,24 +53,21 @@ else:
 #function to check strings are anagroms or not
 def check_anagroms(string1='',string2=''):
 	if len(string2)!=len(string1):
-		return False
+		print('Your entered strings are not anagroms')
 	else:
-		for index in string1:
-			if string1[index]!=string2[-(index+1)]:
-				return False
-			else:
-				return True
+		for character in string1:
+			if string1.count(character)!=string2.count(character):
+				print('Your entered strings are not anagroms')
+			
+		else:
+			print('Your entered strings are anagroms')
+			
 '''taking input from user
 		 and calling function in next three lines'''
 string1=input('Enter 1st string')
 string2=input('Enter 2nd string')
-answer=check_anagroms(string1,string2)
-
-
-if answer=='True':
-	print('Your entered strings are anagroms')
-else:
-	print('Your entered strings are not anagroms')					
+check_anagroms(string1,string2) #function call statement
+				
 # ####################################################################################################
 #program to print first non repeated character
 
