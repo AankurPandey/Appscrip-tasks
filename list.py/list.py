@@ -74,4 +74,39 @@ def find_pairs(List=[],Sum=0):
 List=list(map(int,input('Enter the values of list on a single line with spaces\t\t ').strip().split())) 
 Sum=int(input('enter the number \t'))
 find_pairs(List,Sum)#function calling statement		
+###############################################################
+# 					task5
+#fnction prints the times of vales of array dublication
+def find_dublicates(array=[]):
+	array2=list(dict.fromkeys(array))
+	for value in array2:
+		if array.count(value)>1:
+			print(value, 'is dublicated for ',array.count(value),' times')
+
+array=list(map(int,input('Enter the element of array with spaces\n\t').strip().split()))
+find_dublicates(array)
+
 ############################################################
+# 						task8
+#program to remove dblicates from list
+
+array=list(map(int,input('Enter the element of array with spaces\n\t').strip().split()))#here we had taken input of array from user
+print(array)
+'''here we had first converted list into dictionary where keys of
+	dictionary is the elements of array and again convert the dictionary into list'''
+array=list(dict.fromkeys(array))
+print(array)
+#############################################################
+
+#					task10
+#program to  remove duplicates in an array without using any library.
+
+# function to return array after removing duplicates
+def remove_dublicates(array=[]):
+	array2=[]
+	for value in array:
+		if value not in array2:
+			array2.append(value)
+	return array2
+array=list(map(int,input('Enter the element of array with spaces\n\t').strip().split()))
+print('after removing dublicates from array entered ,the array looks like ',remove_dublicates(array))
