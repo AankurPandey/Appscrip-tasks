@@ -153,13 +153,13 @@ print(ch,'occured',count_occurance(string.lower(),ch.lower()),' times in ',strin
 # Python program to print all permutations 
 
 # Function to print permutations of string  
-def permute(list_string, start, length): 
-    if start==r: 
+def permute(list_string='', start=0, size=0): 
+    if start==size: 
         print( list_string)
     else: 
-        for character in range(start,r+1): 
+        for character in range(start,size+1): 
             list_string[start], list_string[character] = list_string[character], list_string[start] 
-            permute(list_string, start+1, r) ## recursion as we r calling the same function again
+            permute(list_string, start+1, size) ## recursion as we r calling the same function again
             list_string[start], list_string[character] = list_string[character], list_string[start] 
   
 # Driver program to test the above function 
@@ -168,3 +168,16 @@ n = len(string)
 list_string = list(string) 
 permute(list_string, 0, n-1) 
 
+#############################################################################################
+#program to print the given string 
+
+#reverse function here is used to return thr reversed string
+ def reverse(string='',string_rev=''):#taking two arguments 
+	string_rev+=string[-1]
+	if len(string)==1:
+		return string_rev
+	
+	return reverse(string[:-1],string_rev)
+	
+
+print(reverse(input('Enter the string\n'))
