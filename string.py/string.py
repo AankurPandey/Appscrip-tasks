@@ -181,3 +181,24 @@ permute(list_string, 0, n-1)
 	
 
 print(reverse(input('Enter the string\n'))
+############################################################################################
+#program to reverse the words in the given sentence
+   
+      #reverse_words function are used here to return the reverse words of sentence
+def reverse_words(sentence=''):
+	reverse_sentence=''
+	word=''
+	for index in range(2,len(sentence)+1):
+		if sentence[-index]!=' ':
+			word+=sentence[-index]
+		else:
+			for value in range(len(word)):
+				reverse_sentence+=word[-(value+1)]
+			word=''	
+			reverse_sentence+=' '
+	reverse_sentence+='.'
+	return reverse_sentence	
+
+
+sentence=' '+input('Enter the sentence')
+print(reverse_words(sentence))#function call statment
